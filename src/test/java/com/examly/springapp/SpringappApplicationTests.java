@@ -470,7 +470,7 @@ class SpringappApplicationTests {
         
             mockMvc.perform(MockMvcRequestBuilders.get("/api/book-categories/999"))
                     .andExpect(MockMvcResultMatchers.status().isNotFound())
-                    .andExpect(MockMvcResultMatchers.content())
+                    .andExpect(MockMvcResultMatchers.content()
                             .string(org.hamcrest.Matchers.containsString("Book category not found")));
         }
         
